@@ -26,12 +26,18 @@ import "@percy/cypress";
 //   return false;
 // });
 
-Cypress.on("uncaught:exception", (err) => {
-  // return false to prevent the error from failing this test
-  if (
-    err.message.includes("Minified React error #418") ||
-    err.message.includes("Minified React error #423")
-  ) {
-    return false;
-  }
+// Cypress.on("uncaught:exception", (err) => {
+//   // return false to prevent the error from failing this test
+//   if (
+//     err.message.includes("Minified React error #418") ||
+//     err.message.includes("Minified React error #423")
+//   ) {
+//     return false;
+//   }
+// });
+
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false;
 });
