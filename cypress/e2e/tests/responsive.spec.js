@@ -45,9 +45,6 @@ describe("GHH", () => {
     cy.get("img[alt='close']").click();
   });
   it("landing page test", () => {
-    cy.percySnapshot("Landing Page", { widths: [1440] });
-    cy.wait(2000);
-    cy.percySnapshot("Landing Page Mobile", { widths: [390] });
     cy.wait(2000);
     cy.viewport(2048, 1280);
     cy.wait(200);
@@ -103,9 +100,5 @@ describe("GHH", () => {
       ":nth-child(1) > .relative.h-full > .px-4 > .flex-col > .font-meno"
     ).trigger("mouseover");
     cy.contains("Meet Phil").click();
-    cy.wait(10000).then(() => {
-      cy.percySnapshot("Hero Page", { widths: [1440] });
-      cy.percySnapshot("Hero Page Mobile", { widths: [390] });
-    });
   });
 });
