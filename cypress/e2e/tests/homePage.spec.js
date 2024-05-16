@@ -18,7 +18,7 @@ describe("GHH", () => {
     });
   });
 
-  it("404 page test", () => {
+  it("404 page tests", () => {
     cy.visit("/invalidUrl", { failOnStatusCode: false });
     cy.wait(5000).then(() => {
       cy.percySnapshot("404 Page", { widths: [1440] });
