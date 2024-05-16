@@ -41,18 +41,20 @@
 describe("GHH", () => {
   beforeEach("", () => {
     cy.visit("/");
-    cy.wait(15000);
-    cy.get("img[alt='close']").click();
+    cy.wait(5000);
+    // cy.get("img[alt='close']").click();
   });
   it("landing page test", () => {
     cy.wait(2000);
     cy.viewport(2048, 1280);
     cy.wait(200);
-    cy.viewport(1980, 1080);
+    cy.viewport(1920, 1080);
     cy.wait(200);
     cy.viewport(1792, 1120);
     cy.wait(200);
     cy.viewport(1440, 1000);
+    cy.wait(200);
+    cy.viewport(390, 664);
     cy.wait(200);
     cy.viewport("macbook-16");
     cy.wait(200);
@@ -100,5 +102,54 @@ describe("GHH", () => {
       ":nth-child(1) > .relative.h-full > .px-4 > .flex-col > .font-meno"
     ).trigger("mouseover");
     cy.contains("Meet Phil").click();
+
+    cy.wait(8000);
+    cy.viewport(2048, 1280);
+    cy.wait(200);
+    cy.viewport(1980, 1080);
+    cy.wait(200);
+    cy.viewport(1792, 1120);
+    cy.wait(200);
+    cy.viewport(1440, 1000);
+    cy.wait(200);
+    cy.viewport("macbook-16");
+    cy.wait(200);
+    cy.viewport("macbook-15");
+    cy.wait(200);
+    cy.viewport("macbook-13");
+    cy.wait(200);
+    cy.viewport("macbook-11");
+    cy.wait(200);
+    cy.viewport("ipad-2");
+    cy.wait(200);
+    cy.viewport("ipad-mini");
+    cy.wait(200);
+    cy.viewport(390, 812);
+    cy.wait(200);
+    cy.viewport("iphone-x");
+    cy.wait(200);
+    cy.viewport("iphone-xr");
+    cy.wait(200);
+    cy.viewport("iphone-se2");
+    cy.wait(200);
+    cy.viewport("samsung-note9");
+    cy.wait(200);
+    cy.viewport("samsung-s10");
+    cy.wait(200);
+    //landscape
+    cy.viewport("ipad-2", "landscape");
+    cy.wait(200);
+    cy.viewport("ipad-mini", "landscape");
+    cy.wait(200);
+    cy.viewport("iphone-x", "landscape");
+    cy.wait(200);
+    cy.viewport("iphone-xr", "landscape");
+    cy.wait(200);
+    cy.viewport("iphone-se2", "landscape");
+    cy.wait(200);
+    cy.viewport("samsung-note9", "landscape");
+    cy.wait(200);
+    cy.viewport("samsung-s10", "landscape");
+    cy.wait(200);
   });
 });

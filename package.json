@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "delete:reports": "rm -r cypress/reports/* || true",
+    "prereport": "npm run delete:reports",
+    "percyTest": "npx percy exec -- cypress run --spec cypress/e2e/tests/homePage.spec.js",
+    "cy:run_ui_test": "npm run prereport && npm run percyTest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.8.1",
+    "@percy/cli": "^1.28.6",
+    "@percy/cypress": "^3.1.2",
+    "cypress": "^13.9.0",
+    "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.5.0",
     "cypress-multi-reporters": "^1.6.3",
     "faker": "^5.5.3",
@@ -18,10 +25,7 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
     "percy-figma": "^1.0.8",
-    "playwright-webkit": "^1.42.1",
-    "webpack-cli": "^5.1.4",
-    "@percy/cli": "^1.28.5",
-    "@percy/cypress": "^3.1.2",
-    "cypress-iframe": "^1.0.1"
+    "playwright-webkit": "1.42",
+    "webpack-cli": "^5.1.4"
   }
 }
