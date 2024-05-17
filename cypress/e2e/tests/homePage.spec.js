@@ -1,4 +1,4 @@
-describe("GHH Test", () => {
+describe("GHH Testt", () => {
   beforeEach("Launch the URL", () => {
     cy.visit("/");
     cy.wait(10000);
