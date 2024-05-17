@@ -1,5 +1,5 @@
-describe("GHH", () => {
-  beforeEach("Launch URL", () => {
+describe("GHH Tests", () => {
+  beforeEach("Launch the URL", () => {
     cy.visit("/");
     cy.wait(10000);
     // cy.get("img[alt='close']").click();
