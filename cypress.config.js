@@ -36,7 +36,7 @@ module.exports = defineConfig({
     experimentalWebKitSupport: true,
     experimentalOriginDependencies: true,
     // experimentalSessionAndOrigin: true,
-    baseUrl: "https://dev.ghh.scssconsultingapps.com.au/",
+    baseUrl: "http://dev.ghh.scssconsultingapps.com.au/",
     watchForFileChanges: false,
     setupNodeEvents(on, config) {
       require("cypress-mochawesome-reporter/plugin")(on);
